@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - script: dotnet tool install --global dotnet-ef 
+        displayName: 'dotnet install ef'
+        workingDirectory: Source
+        
       - uses: actions/checkout@v2
 
       - name: Set up .NET Core
